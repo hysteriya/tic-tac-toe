@@ -22,9 +22,9 @@ const win=()=>{
         [2, 4, 6]
     ]
     combinations.forEach(e=>{
-        if ((text[e[0]].innerText===text[e[1]].innerText)&&(text[e[2]].innerText===text[e[1]].innerText)&&text[e[0]].innerText!=="")
+        if ((text[e[0]].innerText===text[e[1]].innerText)&&(text[e[2]].innerText===text[e[1]].innerText)&&text[e[0]].innerText!==""){
         document.querySelector(".info").innerText=text[e[0]].innerText+" won";
-        gameOver=true;
+        gameOver=true;}
     })
 }
 
@@ -39,8 +39,9 @@ Array.from(boxes).forEach(element =>{
             turn.play();
             win();
             if (!gameOver){
-                document.getElementsByClassName("info")[0].innerText= "turn for "+turns;
+                document.getElementsByClassName('info')[0].innerText= turns+"'s turn";
             }
         }
+        
     })
 })
